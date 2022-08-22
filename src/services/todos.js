@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseUrl = `${process.env.REACT_APP_API_URL ?? "https://frontendjohn.herokuapp.com/"}`
+const baseUrl = `${process.env.REACT_APP_API_URL ?? "https://localhost:8000"}`
 class TodoDataService {
     getAll(token) {
         axios.defaults.headers.common["Authorization"] = "Token " + token;
