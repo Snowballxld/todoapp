@@ -1,5 +1,7 @@
 import axios from 'axios';
-const baseUrl = `${process.env.REACT_APP_API_URL ?? "https://localhost:8000"}`
+// Heroku environment variable REACT_APP_API_URL = https://backendjohn.herokuapp.com/
+// heroku config:set REACT_APP_API_URL=https://backendjohn.herokuapp.com -a frontendjohn
+const baseUrl = `${process.env.REACT_APP_API_URL ?? "http://localhost:8000"}`
 class TodoDataService {
     getAll(token) {
         axios.defaults.headers.common["Authorization"] = "Token " + token;
